@@ -7,57 +7,58 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
-    title: "React Portfolio Website",
-    description: "Project 1 description",
+    title: "The Wild Oasis",
+    description:
+      "A hotel booking management web application | React, Supabase, React Query",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Anirudhmahule/wild-oasis",
+    previewUrl: "https://wildoasiss.vercel.app",
   },
   {
     id: 2,
-    title: "Potography Portfolio Website",
-    description: "Project 2 description",
+    title: "Shoppy-dashboard",
+    description: "A admin dashboard | React, Context API, Syncfusion",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Anirudhmahule/Shoppy-dashboard",
+    previewUrl: "https://shoppy-dashboard-ivory.vercel.app",
   },
   {
     id: 3,
-    title: "E-commerce Application",
-    description: "Project 3 description",
+    title: "Pizza Palette",
+    description: "A Pizza Ordering App | React, Redux, TailwindCSS",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Anirudhmahule/pizza_palete",
+    previewUrl: "https://pizza-palete.vercel.app",
   },
   {
     id: 4,
-    title: "Food Ordering Application",
-    description: "Project 4 description",
+    title: "Worldwise",
+    description: "A City navigation app | React, Context API",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Anirudhmahule/worldwise ",
+    previewUrl: "https://worldwise-sigma.vercel.app/",
   },
   {
     id: 5,
-    title: "React Firebase Template",
-    description: "Authentication and CRUD operations",
+    title: "UsePopcorn",
+    description: "A movie rating application | React, React Hooks",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Anirudhmahule/usepopkorn",
+    previewUrl: "https://usepopcornmovies.netlify.app",
   },
   {
     id: 6,
-    title: "Full-stack Roadmap",
-    description: "Project 5 description",
+    title: "Groco",
+    description: "A grocery Ordering Website | HTML, CSS, Javascript",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
-    gitUrl: "/",
-    previewUrl: "/",
+    gitUrl: "https://github.com/Anirudhmahule/Foodie-man",
+    previewUrl: "https://grocery-man.netlify.app",
   },
 ];
 
@@ -84,7 +85,7 @@ const ProjectsSection = () => {
       <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
         My Projects
       </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+      {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -100,8 +101,8 @@ const ProjectsSection = () => {
           name="Mobile"
           isSelected={tag === "Mobile"}
         />
-      </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+      </div> */}
+      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
