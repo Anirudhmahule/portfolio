@@ -8,9 +8,17 @@ const ExpiernceSection = () => {
       period: "04/2024 – Present",
       location: "Pune, India",
       points: [
-        "Developed and maintained a web application, implementing daily feature updates and UI enhancements.",
-        "Optimized React components to enhance performance and reduce load times, ensuring a smooth user experience.",
-        "Collaborated with back-end teams to integrate REST APIs and enhance application functionality.",
+        "Developed and maintained a large-scale internal web application, delivering frequent UI enhancements and new features used by global stakeholders.",
+        "Optimized key React screens and reduced perceived load time, resulting in a smoother experience for end users.",
+        "Collaborated with backend teams to integrate REST APIs, improve error handling, and ensure reliable data flows across the app.",
+      ],
+      tech: [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "REST APIs",
+        "Git",
       ],
     },
   ];
@@ -50,11 +58,24 @@ const ExpiernceSection = () => {
               </span>
             </header>
 
-            <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base text-[#D1D5DB] leading-relaxed relative z-10">
+            <ul className="list-disc list-outside pl-5 space-y-2 text-sm md:text-base text-[#D1D5DB] leading-relaxed relative z-10 mb-4">
               {exp.points.map((point, i) => (
                 <li key={i}>{point}</li>
               ))}
             </ul>
+
+            {exp.tech && (
+              <div className="flex flex-wrap gap-2 text-xs md:text-sm relative z-10">
+                {exp.tech.map((item) => (
+                  <span
+                    key={item}
+                    className="px-3 py-1 rounded-full bg-[#111827] border border-[#1F2937] text-[#E5E7EB]"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            )}
           </article>
         ))}
       </div>

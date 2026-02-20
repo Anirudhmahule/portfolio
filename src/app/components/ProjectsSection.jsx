@@ -9,56 +9,73 @@ const projectsData = [
     id: 1,
     title: "The Wild Oasis",
     description:
-      "A hotel booking management web application | React, Supabase, React Query",
+      "Hotel booking management dashboard to manage cabins, bookings, and guests with real-time updates.",
     image: "/images/projects/1.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Anirudhmahule/wild-oasis",
     previewUrl: "https://wildoasiss.vercel.app",
+    tech: ["React", "React Query", "Supabase", "Styled Components"],
+    label: "Featured · Dashboard",
   },
   {
     id: 2,
-    title: "Shoppy-dashboard",
-    description: "A admin dashboard | React, Context API, Syncfusion",
+    title: "Shoppy Dashboard",
+    description:
+      "E-commerce admin dashboard with analytics, orders, and product management in a responsive layout.",
     image: "/images/projects/2.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Anirudhmahule/Shoppy-dashboard",
     previewUrl: "https://shoppy-dashboard-ivory.vercel.app",
+    tech: ["React", "Context API", "Syncfusion"],
+    label: "Admin dashboard",
   },
   {
     id: 3,
     title: "Pizza Palette",
-    description: "A Pizza Ordering App | React, Redux, TailwindCSS",
+    description:
+      "Pizza ordering app with cart, address form, and order tracking built for mobile-first usage.",
     image: "/images/projects/3.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Anirudhmahule/pizza_palete",
     previewUrl: "https://pizza-palete.vercel.app",
+    tech: ["React", "Redux", "Tailwind CSS"],
+    label: "Ordering experience",
   },
   {
     id: 4,
     title: "Worldwise",
-    description: "A City navigation app | React, Context API",
+    description:
+      "City bookmarking app to track places you&apos;ve visited and want to visit, visualized on a map.",
     image: "/images/projects/4.png",
     tag: ["All", "Mobile"],
     gitUrl: "https://github.com/Anirudhmahule/worldwise ",
     previewUrl: "https://worldwise-sigma.vercel.app/",
+    tech: ["React", "Context API"],
+    label: "Travel · Maps",
   },
   {
     id: 5,
     title: "UsePopcorn",
-    description: "A movie rating application | React, React Hooks",
+    description:
+      "Movie discovery and rating app using external APIs with custom hooks for state and side effects.",
     image: "/images/projects/5.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Anirudhmahule/usepopkorn",
     previewUrl: "https://usepopcornmovies.netlify.app",
+    tech: ["React", "Custom Hooks"],
+    label: "Entertainment",
   },
   {
     id: 6,
     title: "Groco",
-    description: "A grocery Ordering Website | HTML, CSS, Javascript",
+    description:
+      "Landing page and ordering flow for a grocery brand, built with semantic HTML, CSS and vanilla JS.",
     image: "/images/projects/6.png",
     tag: ["All", "Web"],
     gitUrl: "https://github.com/Anirudhmahule/Foodie-man",
     previewUrl: "https://grocery-man.netlify.app",
+    tech: ["HTML", "CSS", "JavaScript"],
+    label: "Landing page",
   },
 ];
 
@@ -81,11 +98,23 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      {/* <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+    <section id="projects" className="my-16 md:my-24 scroll-mt-28">
+      <div className="flex flex-col items-center text-center mb-10 md:mb-14">
+        <p className="text-sm uppercase tracking-[0.3em] text-[#60A5FA] mb-3">
+          Selected Work
+        </p>
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+          My Projects
+        </h2>
+        <p className="text-[#ADB7BE] max-w-2xl text-sm md:text-base">
+          A collection of applications I&apos;ve built using React, Next.js, and
+          modern tooling, focused on clean UI, performance, and real-world
+          problems.
+        </p>
+      </div>
+
+      {/* Category filters */}
+      <div className="flex flex-wrap justify-center items-center gap-3 mb-10">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -101,8 +130,12 @@ const ProjectsSection = () => {
           name="Mobile"
           isSelected={tag === "Mobile"}
         />
-      </div> */}
-      <ul ref={ref} className="grid md:grid-cols-2 gap-8 md:gap-12">
+      </div>
+
+      <ul
+        ref={ref}
+        className="grid md:grid-cols-2 xl:grid-cols-3 gap-8 md:gap-10"
+      >
         {filteredProjects.map((project, index) => (
           <motion.li
             key={index}
@@ -118,6 +151,8 @@ const ProjectsSection = () => {
               imgUrl={project.image}
               gitUrl={project.gitUrl}
               previewUrl={project.previewUrl}
+              tech={project.tech}
+              label={project.label}
             />
           </motion.li>
         ))}
