@@ -24,7 +24,9 @@ const HeroSection = () => {
               sequence={[
                 "Anirudh Mahule",
                 1200,
-                "Frontend Web Developer",
+                "Software Engineer (React)",
+                1200,
+                "Frontend Developer",
                 1200,
                 "React & Next.js Engineer",
                 1200,
@@ -35,9 +37,10 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-4 lg:text-xl max-w-2xl">
-            Frontend developer with 2+ years of experience building fast,
-            accessible web applications with React and Next.js. I care deeply
-            about clean UI, performance, and developer experience.
+            Software Engineer with 2+ years of experience building scalable,
+            performance-optimized React.js applications for enterprise pricing
+            platforms. Specialized in reusable component architecture, custom
+            hooks, and modern frontend engineering practices.
           </p>
 
           <div className="flex flex-wrap items-center gap-3 mb-6">
